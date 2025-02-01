@@ -21,7 +21,6 @@ function App() {
         < Route path='/dashboard' element={<Dashboard/>} />
         < Route path="/loginPopup" element={<LoginPopup />} />
         < Route path="/home" element={<Home />} />
-
       </Routes>
     </div>
   );
