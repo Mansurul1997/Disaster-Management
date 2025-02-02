@@ -5,7 +5,7 @@ const CrisisData = [
       description: "Severe flooding has affected thousands of families.",
       severity: "High",
       status: "Approved",
-      image: "/assests/8.jpg",
+      image: "/assests/5.jpg",
     },
     {
       id: 2,

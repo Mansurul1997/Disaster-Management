@@ -1,6 +1,5 @@
 import DonationSection from './donationSection/DonationSection';
 import EmergencyContacts from './emergencyContacts/EmergencyContacts';
-import Footer from './footer/Footer';
 import Header from './header/Header';
 import HeroSection from './heroSection/HeroSection';
 import './home.css';
@@ -17,7 +16,6 @@ export default function Home() {
       <DonationSection />
       <VolunteerOpportunities />
       <EmergencyContacts />
-      <Footer />
     </div>
   )
 }
