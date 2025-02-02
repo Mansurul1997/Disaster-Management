@@ -1,0 +1,171 @@
+.volunteer-container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .volunteer-form {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .volunteer-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .volunteer-form button {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .volunteer-form button:hover {
+    background: #0056b3;
+  }
+  
+  .volunteer-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .volunteer-cards-container {
+    display: flex;
+    overflow: hidden;
+    gap: 20px;
+    width: 100%;  
+    position: relative;
+  }
+  
+  .volunteer-cards-wrapper {
+    display: flex;
+    animation: slide 120s linear infinite; /* Duration increased for smooth movement */
+  }
+  
+  .volunteer-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    width: 250px;
+    border: 1px solid #ccc;
+    flex-shrink: 0;
+    transition: transform 0.5s ease-in-out; /* Smooth transition effect */
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-100%);
+    }
+    40% {
+      transform: translateX(-200%);
+    }
+    60% {
+      transform: translateX(-300%);
+    }
+    80% {
+      transform: translateX(-400%);
+    }
+    100% {
+      transform: translateX(0); /* Loop Back to Start */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .volunteer-cards-container {
+      flex-direction: column;
+      gap: 20px;
+      padding: 0;
+    }
+  
+    .volunteer-cards-wrapper {
+      animation: none; /* Disable auto-slide on mobile */
+    }
+  }
+  
+
+  .volunteer-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .volunteer-info {
+    margin-top: 15px;
+  }
+  
+  .volunteer-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .volunteer-info p {
+    font-size: 1em;
+    color: #555;
+  }
+  
+  .volunteer-footer {
+    margin-top: 40px;
+  }
+  
+  .volunteer-footer a {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .volunteer-footer a:hover {
+    text-decoration: underline;
+  }
+
+  .volunteer-footer button {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .volunteer-footer button:hover {
+     background: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .volunteer-form input {
+      font-size: 14px;
+    }
+  
+    .volunteer-form button {
+      font-size: 16px;
+    }
+  
+    .volunteer-footer a {
+      font-size: 16px;
+    }
+  }

@@ -1,27 +1,99 @@
+/* Center the entire Crisis Page */
+.crisis-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style for the Crisis List */
 .crisis-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .crisis-item {
-    width: 300px;
-    border: 1px solid #ddd;
-    padding: 15px;
-    text-align: center;
-    background: #f9f9f9;
-  }
-  
-  .crisis-item img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.crisis-item {
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background: #f8f9fa;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.crisis-item:hover {
+  transform: scale(1.05);
+}
+
+.crisis-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Filters (Dropdowns) */
+.filters {
+  margin: 20px 0;
+}
+
+.filters select {
+  padding: 10px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.submit_a_crisis {
+  margin-top: 40px;
+}
+
+/* Form Styling */
+.crisis-form {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.crisis-form input,
+.crisis-form textarea,
+.crisis-form select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.crisis-form input:focus,
+.crisis-form textarea:focus,
+.crisis-form select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button */
+.crisis-form button {
+  background: #007bff;
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.crisis-form button:hover {
+  background: #0056b3;
+}

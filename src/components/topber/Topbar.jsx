@@ -7,8 +7,6 @@ export default function Topbar() {
 
   const navigate = useNavigate();
 
-  const [topbarLink,setTopbarLink] = useState("Crisis");
-
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
@@ -21,10 +19,10 @@ export default function Topbar() {
       </div>
       <div className="topbarRight">
         <div className="topbarLinks">
-          <span onClick={()=>navigate("/Crisis")} className={topbarLink==="Crisis"?"active":""}>Crisis</span>
-          <span onClick={()=>setTopbarLink("Fund")} className={topbarLink==="Fund"?"active":""}>Fund</span>
-          <span onClick={()=>setTopbarLink("Volunteer")} className={topbarLink==="Volunteer"?"active":""}>Volunteer</span>
-          <span onClick={()=>setTopbarLink("Dashboard")} className={topbarLink==="Dashboard"?"active":""}>Dashboard</span>
+          <span onClick={()=>navigate("/Crisis")} >Crisis</span>
+          <span onClick={()=>navigate("/Donation")} >Fund</span>
+          <span onClick={()=>navigate("Volunteer")} >Volunteer</span>
+          <span onClick={()=>navigate("Dashboard")} >Dashboard</span>
         </div>
         <img onClick={() => navigate("/LoginPopup")} src="/assests/1.jpg" alt="" className="topbarImg"/>
       </div>

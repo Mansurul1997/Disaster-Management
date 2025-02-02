@@ -1,7 +1,6 @@
-import React from 'react'
-import "./crisis.css";
 import { useState } from "react";
 import CrisisData from "./CrisisData";
+import "./crisis.css"; // Import CSS
 
 function Crisis() {
   const [filter, setFilter] = useState({ severity: "All", status: "All" });
@@ -14,19 +13,16 @@ function Crisis() {
     image: "",
   });
 
-  // Filter function
   const filteredCrises = crises.filter(
     (crisis) =>
       (filter.severity === "All" || crisis.severity === filter.severity) &&
       (filter.status === "All" || crisis.status === filter.status)
   );
 
-  // Handle form input change
   const handleChange = (e) => {
     setNewCrisis({ ...newCrisis, [e.target.name]: e.target.value });
   };
 
-  // Add a new crisis (Admin approval needed)
   const handleSubmit = (e) => {
     e.preventDefault();
     setCrises([...crises, { ...newCrisis, id: crises.length + 1 }]);
@@ -35,11 +31,11 @@ function Crisis() {
   };
 
   return (
-    <div>
+    <div className="crisis-container">
       <h1>Crisis List</h1>
 
       {/* Filter Section */}
-      <div>
+      <div className="filters">
         <label>Severity: </label>
         <select onChange={(e) => setFilter({ ...filter, severity: e.target.value })}>
           <option>All</option>
@@ -61,7 +57,7 @@ function Crisis() {
       <div className="crisis-list">
         {filteredCrises.map((crisis) => (
           <div key={crisis.id} className="crisis-item">
-            <img src={crisis.image} alt={crisis.title} />
+            <img src={crisis.image || "/assets/default.jpg"} alt={crisis.title} />
             <h2>{crisis.title}</h2>
             <p>{crisis.description}</p>
             <p><b>Severity:</b> {crisis.severity}</p>
@@ -70,11 +66,11 @@ function Crisis() {
         ))}
       </div>
 
-      {/* Crisis Submission Form (For Anonymous Users) */}
-      <h2>Submit a Crisis</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="title" placeholder="Title" value={newCrisis.title} onChange={handleChange} required />
-        <textarea name="description" placeholder="Description" value={newCrisis.description} onChange={handleChange} required />
+      {/* Crisis Submission Form */}
+      <h2 className="submit_a_crisis">Submit a Crisis</h2>
+      <form className="crisis-form" onSubmit={handleSubmit}>
+        <input type="text" name="title" placeholder="Crisis Title" value={newCrisis.title} onChange={handleChange} required />
+        <textarea name="description" placeholder="Crisis Description" value={newCrisis.description} onChange={handleChange} required />
         <label>Severity: </label>
         <select name="severity" onChange={handleChange}>
           <option>Low</option>
@@ -89,4 +85,3 @@ function Crisis() {
 }
 
 export default Crisis;
-
