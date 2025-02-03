@@ -68,10 +68,9 @@ function Volunteer() {
           </div>
         </div>
       </div>
-
       {/* Link to Home or Other Pages */}
       <div className="volunteer-footer">
-        <button onClick={()=>navigate("/Home")} >Back to Home </button>
+        <button onClick={()=>navigate("/Home")} className="volunteer-footer-btn" >Back to Home </button>
       </div>
     </div>
   );
