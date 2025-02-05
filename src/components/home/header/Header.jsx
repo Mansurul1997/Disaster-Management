@@ -28,7 +28,7 @@ export default function Header() {
 
   <Slider {...settings}>
     {Hdata.map((val, index)=>{
-      const {cover,title,desc} = val;
+      const {cover,title,desc,detail} = val;
       return(
         <div className='header' key={index}>
         <img className='header_img' src={cover} alt="" />
@@ -37,7 +37,7 @@ export default function Header() {
             <p>{desc}</p>
             <button
                   className="view-details-btn"
-                  onClick={() => handleViewDetails(desc)}
+                  onClick={() => handleViewDetails(detail)}
                 >
                   View Details
                 </button>
