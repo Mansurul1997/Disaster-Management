@@ -1,17 +1,22 @@
-import React from 'react';
-import './footer.css'
+import React from "react";
+import "./footer.css";
 const Footer = () => {
   return (
-    <div className='footer' id='footer'>
+    <div className="footer" id="footer">
       <div className="footer-content">
         <div className="footer-content-left">
-            <img className='footer-logo' src="/assests/nameLogo.jpg" alt="" />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A porro quasi natus asperiores, unde dolorum doloribus iste impedit magni aspernatur nam deserunt laboriosam officiis provident quas ab totam, illum minima?</p>
-            <div className="footer-social-icons">
-                <img src="/assests/facebook_icon.png" alt="" />
-                <img src="/assests/twitter_icon.png" alt="" />
-                <img src="/assests/linkedin_icon.png" alt="" />
-            </div>
+          <img className="footer-logo" src="/assests/nameLogo.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A porro
+            quasi natus asperiores, unde dolorum doloribus iste impedit magni
+            aspernatur nam deserunt laboriosam officiis provident quas ab totam,
+            illum minima?
+          </p>
+          <div className="footer-social-icons">
+            <img src="/assests/facebook_icon.png" alt="" />
+            <img src="/assests/twitter_icon.png" alt="" />
+            <img src="/assests/linkedin_icon.png" alt="" />
+          </div>
         </div>
         <div className="footer-content-center">
           <h2>COMPANY</h2>
@@ -30,9 +35,11 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <p className="footer-copyright">Copyright 2025 @ Tomato.com - All Right Reserved</p>
+      <p className="footer-copyright">
+        Copyright 2025 @ Mansurul - All Right Reserved
+      </p>
     </div>
   );
-}
+};
 
 export default Footer;
