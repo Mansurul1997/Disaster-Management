@@ -27,7 +27,13 @@ function Crisis() {
     e.preventDefault();
     setCrises([...crises, { ...newCrisis, id: crises.length + 1 }]);
     alert("Crisis submitted! Awaiting admin approval.");
-    setNewCrisis({ title: "", description: "", severity: "Medium", status: "Pending", image: "" });
+    setNewCrisis({
+      title: "",
+      description: "",
+      severity: "Medium",
+      status: "Pending",
+      image: "",
+    });
   };
 
   return (
@@ -37,7 +43,9 @@ function Crisis() {
       {/* Filter Section */}
       <div className="filters">
         <label>Severity: </label>
-        <select onChange={(e) => setFilter({ ...filter, severity: e.target.value })}>
+        <select
+          onChange={(e) => setFilter({ ...filter, severity: e.target.value })}
+        >
           <option>All</option>
           <option>Low</option>
           <option>Medium</option>
@@ -46,7 +54,9 @@ function Crisis() {
         </select>
 
         <label>Status: </label>
-        <select onChange={(e) => setFilter({ ...filter, status: e.target.value })}>
+        <select
+          onChange={(e) => setFilter({ ...filter, status: e.target.value })}
+        >
           <option>All</option>
           <option>Approved</option>
           <option>Pending</option>
@@ -57,11 +67,18 @@ function Crisis() {
       <div className="crisis-list">
         {filteredCrises.map((crisis) => (
           <div key={crisis.id} className="crisis-item">
-            <img src={crisis.image || "/assets/default.jpg"} alt={crisis.title} />
+            <img
+              src={crisis.image || "/assets/default.jpg"}
+              alt={crisis.title}
+            />
             <h2>{crisis.title}</h2>
             <p>{crisis.description}</p>
-            <p><b>Severity:</b> {crisis.severity}</p>
-            <p><b>Status:</b> {crisis.status}</p>
+            <p>
+              <b>Severity:</b> {crisis.severity}
+            </p>
+            <p>
+              <b>Status:</b> {crisis.status}
+            </p>
           </div>
         ))}
       </div>
@@ -69,8 +86,21 @@ function Crisis() {
       {/* Crisis Submission Form */}
       <h2 className="submit_a_crisis">Submit a Crisis</h2>
       <form className="crisis-form" onSubmit={handleSubmit}>
-        <input type="text" name="title" placeholder="Crisis Title" value={newCrisis.title} onChange={handleChange} required />
-        <textarea name="description" placeholder="Crisis Description" value={newCrisis.description} onChange={handleChange} required />
+        <input
+          type="text"
+          name="title"
+          placeholder="Crisis Title"
+          value={newCrisis.title}
+          onChange={handleChange}
+          required
+        />
+        <textarea
+          name="description"
+          placeholder="Crisis Description"
+          value={newCrisis.description}
+          onChange={handleChange}
+          required
+        />
         <label>Severity: </label>
         <select name="severity" onChange={handleChange}>
           <option>Low</option>

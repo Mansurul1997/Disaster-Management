@@ -21,7 +21,10 @@ function Donation() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!form.name || !form.amount) return alert("Please fill all fields!");
-    setDonations([...donations, { name: form.name, amount: parseFloat(form.amount) }]);
+    setDonations([
+      ...donations,
+      { name: form.name, amount: parseFloat(form.amount) },
+    ]);
     alert("Donation Successful!");
     setForm({ name: "", amount: "", method: "Bkash" });
   };
@@ -49,8 +52,13 @@ function Donation() {
 
       {/* Total Donation & Progress */}
       <div className="donation-summary">
-        <h2>Total Donations: ৳{donations.reduce((acc, d) => acc + d.amount, 0)}</h2>
-        <progress value={donations.reduce((acc, d) => acc + d.amount, 0)} max="1000"></progress>
+        <h2>
+          Total Donations: ৳{donations.reduce((acc, d) => acc + d.amount, 0)}
+        </h2>
+        <progress
+          value={donations.reduce((acc, d) => acc + d.amount, 0)}
+          max="1000"
+        ></progress>
       </div>
 
       {/* Bar Chart for Donations & Expenses */}
@@ -63,8 +71,22 @@ function Donation() {
       <div className="donation-form">
         <h2>Make a Donation</h2>
         <form onSubmit={handleSubmit}>
-          <input type="text" name="name" placeholder="Your Name" value={form.name} onChange={handleChange} required />
-          <input type="number" name="amount" placeholder="Donation Amount (Taka)" value={form.amount} onChange={handleChange} required />
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={form.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="number"
+            name="amount"
+            placeholder="Donation Amount (Taka)"
+            value={form.amount}
+            onChange={handleChange}
+            required
+          />
           <select name="method" value={form.method} onChange={handleChange}>
             <option value="Bkash">Bkash</option>
             <option value="Nagad">Nagad</option>
@@ -91,4 +113,3 @@ function Donation() {
 }
 
 export default Donation;
-
