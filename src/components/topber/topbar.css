@@ -50,11 +50,16 @@
     justify-content: space-around;
     color: white;
 }
+.topbarLinks span:hover{
+    background-color: rgb(12, 70, 122);
+    border-radius: 12px;
+}
 .topbarLinks span{
     margin-right: 25px;
     font-size: 18px;
     cursor: pointer;
 }
+
 .topbarRight .active {
     padding-bottom: 2px;
     border-bottom: 2px solid whitesmoke;
