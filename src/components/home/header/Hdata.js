@@ -24,7 +24,7 @@ const Hdata = [
     },
     {
         id: 4,
-        cover: "/assests/5.jpg",
+        cover: "/assests/11.avif",
         category: "Lifestyle",
         title: "Our embankments are contributing to floods, not stopping them",
         desc: "Dr S Nazrul Islam, founder of Bangladesh Environment Network (BEN) and Vice President of Bangladesh Poribesh Andolon (BAPA), speaks with Naznin Tithi of The Daily Star about the causes behind the devastating floods in Sylhet and Sunamganj, and what the government must do to avoid such disasters in the future. "
